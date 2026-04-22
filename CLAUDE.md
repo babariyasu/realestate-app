@@ -74,6 +74,13 @@ npm run lint       # Lint実行
 - 機能開発はフィーチャーブランチ（`feature/xxx`）で行い、PRを経由してマージする
 - プッシュ前に `npm run lint` と `npm run build` が通ることを確認する
 
+## デプロイ情報
+
+- **本番URL**: https://realestate-app-bice.vercel.app/
+- **ホスティング**: Vercel（GitHub連携による自動デプロイ）
+- **Supabaseプロジェクト名**: realestate-app
+- **環境変数**: Vercel ダッシュボードの Environment Variables で管理（`.env` はローカルのみ）
+
 ## コーディング規約
 
 - TypeScript strict モードを使用する
