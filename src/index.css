@@ -198,10 +198,62 @@ body {
   margin-bottom: 0.5rem;
 }
 
+/* 一覧ヘッダー（タイトル＋新規登録ボタン） */
+.section-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
 .properties-count {
   font-size: 0.9rem;
   color: #718096;
-  margin-bottom: 1.5rem;
+  margin-top: 0.25rem;
+}
+
+/* 新規登録ボタン */
+.btn-add {
+  flex-shrink: 0;
+  padding: 0.6rem 1.25rem;
+  background-color: #276749;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.btn-add:hover {
+  background-color: #22543d;
+}
+
+/* ローディング・空状態 */
+.loading-indicator {
+  text-align: center;
+  padding: 3rem 0;
+  color: #718096;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #718096;
+}
+
+.empty-state p {
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+}
+
+.empty-state .btn-primary {
+  width: auto;
+  padding: 0.7rem 1.75rem;
+  display: inline-block;
 }
 
 .properties-grid {
@@ -277,6 +329,7 @@ body {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 .tag {
@@ -285,6 +338,134 @@ body {
   background-color: #edf2f7;
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
+}
+
+/* カード内の編集・削除ボタン行 */
+.property-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.btn-edit {
+  flex: 1;
+  padding: 0.45rem 0;
+  background-color: #ebf8ff;
+  color: #2b6cb0;
+  border: 1.5px solid #bee3f8;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-edit:hover {
+  background-color: #bee3f8;
+}
+
+.btn-delete {
+  flex: 1;
+  padding: 0.45rem 0;
+  background-color: #fff5f5;
+  color: #c53030;
+  border: 1.5px solid #fed7d7;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-delete:hover {
+  background-color: #fed7d7;
+}
+
+/* ===== モーダル ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 100;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2rem;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.modal-header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a2a4a;
+}
+
+.modal-close {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: #edf2f7;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #4a5568;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  background-color: #e2e8f0;
+}
+
+/* フォームのボタン行（キャンセル＋送信） */
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.btn-cancel {
+  flex: 1;
+  padding: 0.75rem;
+  background: #edf2f7;
+  color: #4a5568;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-cancel:hover {
+  background-color: #e2e8f0;
+}
+
+.form-actions .btn-primary {
+  flex: 1;
+  width: auto;
+  margin-top: 0;
 }
 
 /* レスポンシブ対応 */
